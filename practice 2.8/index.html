@@ -1,0 +1,126 @@
+<!---
+  Simone Orange
+  sro5234@psu.edu
+  March 14th, 2024
+--->
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    
+    
+    <style>
+      .box {
+        padding: 1em 0;
+        background-color: rgb(220, 245, 245);
+        border: 1px solid #ccc;
+        text-align: center;
+      }
+    </style>
+    <link rel="stylesheet" href="styles/colors.css">
+    <!--^its important for the stylesheet link to be below the style section
+      so it doesnt get overridden by bootstrap or others-->
+  </head>
+  <body>
+
+<!--
+   // Nav example
+    <nav class="nav nav-tabs nav-fill nav-justified justify-content-center sticky-top bg-warning-subtle">//pills, tabs, underline
+      <a class="nav-link active" href="index.html" aria-current="page">Home Page</a>
+      <a class="nav-link " href="hero.html" >Product</a>
+      <a class="nav-link disabled" href="inventory.html">Inventory</a>
+    </nav> -->
+
+
+    <!--navbar ex-->
+    <nav class="navbar navbar-expand-sm justify-content-center bg-warning-subtle sticky-top">
+      <div class="container-fluid">
+        <!--1. brand-->
+        <span class="navbar-brand h1 mb-0 magenta">Pizza Express!</span>
+
+
+        <!--2.1 toggle button-->
+        <button class="navbar-toggler" 
+        data-bs-toggle="collapse"
+        data-bs-target="#my-nav-menu">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!--2.2 Collapsed Nav Menu-->
+        <div class="navbar-collapse collapse" id="my-nav-menu">
+          Nav Links Go Here!
+          <div class="navbar-nav justify-content-center nav-underline p-2">
+            <a class="nav-link active" href="index.html"  aria-current="page">Home Page</a>
+            <a class="nav-link " href="hero.html">Product</a>
+            <a class="nav-link " href="inventory.html">Inventory</a>
+          </div>
+
+
+           <!--3. text-->
+        <span class="navbar-text">Hello!</span>
+        </div>
+
+
+
+      </div>
+    </nav>
+
+
+
+
+    <!--bootstrap lesson-->
+    <main class="container ">
+    <h1 class="green">Hello, world!</h1>
+      <p>Then I <span class="green">would never</span> talk to that person about <span class="purple">boa constrictors, or primeval forests, or stars.</span> I would bring
+        myself down to his level. I would talk to him about bridge, and golf, and <span class="magenta">politics, and neckties.</span> And the
+        grown-up would be greatly pleased to have met such a sensible man.</p>
+
+
+        <!--grid example-->
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-3">
+          <div class="col box bg-green">Col</div>
+          <div class="col box bg-magenta">Col</div>
+          <div class="col box bg-purple">Col</div>
+          <div class="col box">Col</div>
+          <div class="col box">Col</div>
+
+        </div>
+
+
+
+        <div class="row g-3">
+          <div class="col-sm-6 col-md-3 box"> asdadefef</div>
+          <div class="col-sm col-md-3 box"> asdadefef</div>
+          <div class="col-sm col-md-3 box"> asdadefef</div>
+          <div class="col-sm col-md-3 box"> asdadefef</div>
+        </div>
+
+        <div class="row g-3">
+          <div class="col-sm-8 col-md-6 box"> asdadefef</div>
+          <div class="col-sm-4 col-md-6 box"> asdadefef</div>
+        </div>
+
+        <div class="row g-3">
+          <div class="col box"> asdadefef</div>
+        </div>
+  
+        <div class="row g-3">
+          <div class="col box"> asdadefef</div>
+          <div class="col-4 box"> asdadefef</div>
+          <div class="col box"> asdadefef</div>
+          <div class="col box"> asdadefef</div>
+          <div class="col box"> asdadefef</div>
+          <div class="col box"> asdadefef</div>
+        </div>
+  
+      </main>
+
+    <button type="button" class="btn btn-outline-warning btn-lg">Hi!</button>
+
+  <!-- bootstrap, javascript code-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  </body>
+</html>

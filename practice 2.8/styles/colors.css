@@ -1,0 +1,50 @@
+/** Global Variable or Root Variable- available anywhere on the web page 
+using developer tools can help to show if the styles are showing/working**/
+
+
+:root {
+    --app-green: rgb(94, 195, 94);
+    --app-magenta: magenta;
+    --app-purple: rgb(168, 6, 213);
+}
+
+
+.green {
+ color: var(--app-green)
+}
+
+.bg-green {
+ background-color: var(--app-green);
+}
+
+
+.bg-magenta {
+ background-color: var(--app-magenta)
+}
+
+.magenta {
+    color: var(--app-magenta)
+   }
+
+
+.purple {
+    color: var(--app-purple)
+}
+
+.bg-purple {
+    background-color: var(--app-purple);
+}
+/**bootstrap override **/
+
+.btn-magenta {
+    background-color: var(--app-magenta)
+}
+
+.btn-magenta:hover {
+    background-color: var(--app-purple)
+}
+
+.btn-magenta:active,
+.btn-magenta:focus  {
+    background-color: pink !important;
+}

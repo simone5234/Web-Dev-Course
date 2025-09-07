@@ -1,0 +1,115 @@
+<!---
+  Simone Orange
+  sro5234@psu.edu
+  March 14th, 2024
+--->
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Hero Page </title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    
+    
+    <style>
+      .box {
+        padding: 1em 0;
+        background-color: rgb(220, 245, 245);
+        border: 1px solid #ccc;
+        text-align: center;
+      }
+
+    </style>
+    <link rel="stylesheet" href="styles/colors.css">
+
+  </head>
+  <body>
+
+<!--
+   // Nav example
+    <nav class="nav nav-tabs nav-fill nav-justified justify-content-center sticky-top bg-warning-subtle">//pills, tabs, underline
+      <a class="nav-link" href="index.html">Home Page</a>
+      <a class="nav-link active" href="hero.html" aria-current="page">Product</a>
+      <a class="nav-link disabled" href="inventory.html">Inventory</a>
+    </nav> -->
+
+
+    <!--navbar ex-->
+    <nav class="navbar navbar-expand-sm justify-content-center bg-warning-subtle sticky-top">
+      <div class="container-fluid">
+        <!--1. brand-->
+        <span class="navbar-brand h1 mb-0">Pizza Express!</span>
+
+
+        <!--2.1 toggle button-->
+        <button class="navbar-toggler" 
+        data-bs-toggle="collapse"
+        data-bs-target="#my-nav-menu">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!--2.2 Collapsed Nav Menu-->
+        <div class="navbar-collapse collapse" id="my-nav-menu">
+          Nav Links Go Here!
+          <div class="navbar-nav justify-content-center nav-underline p-2">
+            <a class="nav-link" href="index.html">Home Page</a>
+            <a class="nav-link active" href="hero.html" aria-current="page">Product</a>
+            <a class="nav-link " href="inventory.html">Inventory</a>
+          </div>
+
+
+           <!--3. text-->
+        <span class="navbar-text">Hello!</span>
+        </div>
+
+
+
+      </div>
+    </nav>
+
+    <!--Hero example-->
+    <main class="container-md ">
+        <div class="row">
+            <!--columns go here-->
+            <div class="col-sm m-sm-4 m-md-3">
+                <h1 class="display-4 m-4 pb-3 text-uppercase text-warning">Pizza is Yummy!</h1>
+                <p class="lead text-danger">Pizza goes in my tummy. I like pepperoni and <span class="text-warning">cheese and hot honey too!</span> And even red peppers! And sometimes black <span class="green">olives.</span> Come get some pizza!</p>
+                
+                <!--Action Button(removed btn-warning)-->
+                <button class="btn btn-magenta btn-lg" 
+                data-bs-toggle="collapse"
+                data-bs-target="#example-panel"
+                >
+                  Order Now!</button>
+
+            </div>
+
+            <div class="col-sm">
+                <img src="images/pizza.jpg" class="img-fluid rounded mt-4">    
+            </div>
+
+        </div>
+    </main>
+
+<!-- target elements-->
+    <section class="container collapse" id="example-panel"> 
+      <div class="card card-body">
+        Content Goes Here- Pizza Choices
+        <div class="col g-3">
+          <div class="col box"> BBQ Pizza</div>
+          <div class="col box"> Cheese Pizza</div>
+          <div class="col box"> Pepperoni Pizza</div>
+          <div class="col box"> Vegan Pizza</div>
+          <div class="col box"> Veggie Pizza</div>
+          <div class="col box"> Triple Meat Pizza</div>
+        </div>
+      </div>
+    </section>
+
+
+
+  <!-- bootstrap, javascript code-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  </body>
+</html>
