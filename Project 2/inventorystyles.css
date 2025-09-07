@@ -1,0 +1,128 @@
+
+
+body{
+    background-color: #f4c2e8;
+    overflow-x: hidden;
+    margin: 0;
+    scrollbar-width: none;
+
+}
+
+.navbar {
+    background-color: #dbc2f4;
+    position: sticky;
+    overflow-x: hidden;
+}
+.navbar-collapse {
+    overflow-y: hidden;
+}
+
+footer{
+    background-color: #dbc2f4;
+    color: black;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    width: 100%;
+    height: 145px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: -5px;
+    padding-top: -5px;
+    margin-bottom: 20px;
+    font-size: larger;
+
+}
+
+.card{
+    border: 1px solid #dc408f;
+    border-radius: 5px;
+    margin: auto;
+    background-color: #e881b5;
+    box-shadow: 2px 5px 10px #232A2F;
+    width: 250px;
+    align-items: center;
+    
+}
+
+.card img{
+    width: 100%; 
+    height: 250px;
+    object-fit: cover;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+}
+.card p{
+    padding-left: 10px;
+    padding-right: 10px;
+    text-align: center;
+    color: whitesmoke;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.card-container {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    place-content: center;
+}
+.card:hover{
+    background: #dc408f;
+    transition: ease-in-out all 0.5s;
+    
+}
+a:hover{
+    color: pink;
+}
+a:focus{
+    background-color: black;
+    color:antiquewhite;
+
+}
+/*flexbox code here*/
+.container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    display: flex;
+
+}/*flexbox code ends here*/
+
+
+
+/*color related starts here*/
+:root {
+    --app-pink: #e881b5;
+    --app-purple: #b481e8;
+}
+
+.bg-pink {
+ background-color: var(--app-pink)
+}
+
+.pink {
+    color: var(--app-pink)
+}
+
+.bg-purple {
+    background-color: var(--app-purple)
+   }
+   
+.purple {
+       color: var(--app-purple)
+}
+
+.td {
+    color:  #e881b5 !important;
+}
+/*colors end here*/
+.table {
+    font-size: 20px;
+}
+
+
+

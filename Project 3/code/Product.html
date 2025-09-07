@@ -1,0 +1,134 @@
+<!---
+  Simone Orange
+  sro5234@psu.edu
+  April 26th, 2024
+--->
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Product Page </title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    
+    <style>
+      .box {
+        padding: 1em 0;
+        background-color:  rgb(220, 245, 245);
+        text-align: center;
+      }
+      
+
+    </style>
+    <link rel="stylesheet" href="../style/productstyles.css">
+
+  </head>
+  <body>
+
+
+    <!--navbar-->
+    <nav class="navbar navbar-expand-md justify-content-center sticky-top">
+        <div class="container-fluid">
+
+          <span class="navbar-brand h1 mb-0"><span style="color: #e881b5">R</span><span style="color: #e881b5">P</span></span>
+  
+          <button class="navbar-toggler" 
+          data-bs-toggle="collapse"
+          data-bs-target="#my-nav-menu">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+  
+          <div class="navbar-collapse collapse" id="my-nav-menu">
+            <span style="color: white">Check out our beautiful polishes here!</span>
+            <div class="navbar-nav justify-content-center nav-underline p-2">
+              <a class="nav-link " href="../code/home.html" style="color: white">Home Page</a>
+              <a class="nav-link active" href="../code/Product.html" aria-current="page" style="color: white">Product</a>
+              <a class="nav-link " href="../code/inventory.html" style="color: white">Inventory</a>
+              <a class="nav-link " href="../code/event.html"  style="color: white">Event Sign Up Page</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+    <!--Hero-->
+    <main class="container-md ">
+        <div class="row">
+
+            <div class="col-sm m-sm-4 m-md-3 p-md-3">
+                <h1 class="display-5 m-4 pb-3 text-uppercase margin-bottom-3 fw-bold" style="color:#e881b5; text-align: center;"><u>Rose Palette</u></h1>
+                <p class="lead fw-bold" style="color: white; text-align: center;">Our goal here at Rose Palette is to make
+                sure that every single customer is happy with their purchase of quality nail polish.
+                We check each and every package before it gets sent out to make sure that you get what
+                you ordered. We hope that you enjoy our products and have a beautiful day!</p>
+
+                
+
+
+<!--alert button-->
+<div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalToggleLabel">Congrats!!</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" ></button>
+      </div>
+      <div class="modal-body">
+        With our newest set of polishes being released we decided you all should get something special!
+        Use the code "FLOWERPETAL" to get 50% off on any order over $10! Happy shopping! <span> 😀 </span>
+      </div>
+      <div class="modal-footer">
+      </div>
+    </div>
+  </div>
+</div>
+<button class="btn btn-pink" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">Click for a surprise!</button>
+<!--end of alert button-->
+
+            </div>
+
+            <div class="col-sm ">
+                <img src="../images/flowernails.jpg" class="img-fluid rounded mt-4 center">    
+            </div>
+
+        </div>
+    </main>
+
+    
+
+    <!--display section-->
+<div class="container px-4 py-5 " id="custom-cards">
+  <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5"><!--DO NOT REMOVE g-4 py-5-->
+    <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg " style="background-image: url('../images/Polished_purple_nails_with_nail_art_on.jpg');">
+        <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1" style="text-align: center;">
+          <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold" >Lustrous Lavender and Inflamed Red</h3>
+        </div>
+      </div> <!--ends here 1-->
+      <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg " style="background-image: url('../images/cand-apple-red.avif');">
+        <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1" style="text-align: center;">
+          <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Candy Apple Red with Shiny Top Coat</h3>
+        </div>
+      </div> <!--ends here 2-->
+      <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg " style="background-image: url('../images/motleyblue.jpg');">
+        <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1" style="text-align: center;">
+          <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Crispy Cobalt Blue with Shiny Top Coat</h3>
+        </div>
+      </div> <!--ends here 3-->
+    </div>
+</div>
+     <!--end of display-->   
+
+
+  <!-- bootstrap, javascript code-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <!--end of JS-->
+  
+  <!--footer down here-->
+  <footer>
+    <p>Rose Palette Contact Info
+    <br><a href="mailto:rosepalette@gmail.com">rosepalette@gmail.com</a>
+    <br>148-609-2175
+    <br>Address: 742 Evergreen Terrace, Springfield</p>
+  </footer>
+  </body>
+</html>

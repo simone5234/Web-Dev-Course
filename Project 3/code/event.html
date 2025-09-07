@@ -1,0 +1,365 @@
+<!---
+  Simone Orange
+  sro5234@psu.edu
+  April 26th, 2024
+--->
+
+<!doctype html>
+<html lang="en"> 
+    <head>    
+        <meta charset="utf-8">    
+        <meta name="viewport" content="width=device-width, initial-scale=1">    
+        <title>Event Sign Up Page</title>       
+        <!-- Bootstrap CSS Imports -->    
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"crossorigin="anonymous">    
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">  
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    
+        <style>
+          .box {
+            padding: 1em 0;
+            background-color:  rgb(220, 245, 245);
+            text-align: center;
+          }
+          
+    
+        </style>
+        <link rel="stylesheet" href="../style/eventstyles.css"><!--eventstyles.css-->
+        <script>
+            //javascript goes here
+            function register() {
+                const form = document.querySelector('#user');
+
+                const data = new FormData(form);
+
+                const firstName = data.get('fname');
+                const lastName = data.get('lname');
+
+                const a = document.getElementById('name');
+                    a.value = firstName + ' ' + lastName;
+                
+                const x = document.getElementById('exampleModal');
+                const y = bootstrap.Modal.getInstance(x);
+                    y.hide();
+            }
+
+            function resetForm(){
+                const form = document.querySelector('#user');
+                form.className = 'my-3';
+            }
+
+            function resetFormNew(){
+                const form = document.querySelector('#event');
+
+                form.className = 'my-3';
+            }
+
+            function validate(){
+                const form = document.querySelector('#user');
+                form.classList.add('was-validated');
+            }
+
+            function finalRegister(){
+                const form = document.querySelector('#event');
+                form.classList.add('was-validated');
+            }
+
+            function tooltipsStart(){
+                const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+                const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+            }
+
+            function studentSwitchCheck() {
+                var isChecked=document.getElementById("studentSwitch").checked;
+                console.log(isChecked);
+                changeEmail(isChecked);
+            }
+            
+            function changeEmail(isChecked) {
+                if (isChecked == true) {
+                    document.getElementsByName("email")[0].value="";
+                    document.getElementsByName("email")[0].placeholder="abc@psu.edu";
+                    document.getElementsByName("email")[0].pattern=".+@psu\.edu";//pattern=".+@psu\.edu"
+                } else {
+                    document.getElementsByName("email")[0].value="";
+                    document.getElementsByName("email")[0].placeholder="abc@gmail.com";
+                }
+            }
+                
+            function numSwitchCheck() {
+                var numIsChecked=document.getElementById("numSwitch").checked;
+                console.log(numIsChecked);
+                addNumber(numIsChecked);
+            }
+            function addNumber(numIsChecked) {
+                if (numIsChecked == true) {
+                    document.getElementById("phone").disabled = false;
+
+                } else {
+                    document.getElementById("phone").disabled = true;
+                }
+            }
+
+        </script>
+    </head>  
+    <body onload="tooltipsStart()">    
+
+            <!--navbar -->
+    <nav class="navbar navbar-expand-md justify-content-center sticky-top">
+        <div class="container-fluid">
+
+          <span class="navbar-brand h1 mb-0"><span style="color: #e881b5">R</span><span style="color: #e881b5">P</span></span>
+  
+          <button class="navbar-toggler" 
+          data-bs-toggle="collapse"
+          data-bs-target="#my-nav-menu">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+  
+          <div class="navbar-collapse collapse" id="my-nav-menu">
+            <span style="color: white">Check out our beautiful polishes here!</span>
+            <div class="navbar-nav justify-content-center nav-underline p-2">
+              <a class="nav-link " href="../code/home.html"  style="color: white">Home Page</a>
+              <a class="nav-link " href="../code/Product.html" style="color: white">Product</a>
+              <a class="nav-link " href="../code/inventory.html" style="color: white">Inventory</a>
+              <a class="nav-link active" href="../code/event.html"  aria-current="page" style="color: white">Event Sign Up Page</a>
+            </div>
+          </div>
+
+        </div>
+      </nav>
+    <!--end of navbar-->
+
+
+    <!--Hero-->
+    <main class="container-md ">
+        <div class="row">
+            <div class="col-sm m-sm-4 m-md-3">
+                <h1 class="display-4 m-4 pb-3 text-uppercase" style="text-align: center; color: #e881b5; "><u>Rose Palette</u></h1>
+                <p class="lead" style="text-align: center; color: white"><span style="color: white; "><b>Luxury Nail Polish</b></span></p>
+            </div>
+        </div>
+    </main>
+
+
+        <!--end of section-->
+
+        <!-- Bootstrap Lesson --->    
+        <main class="container">      
+            <p class="lead  m-sm-4 m-md-3 p-md-3" style="text-align: center; color: white;">
+                <b>We're currently in the process of setting up a pop-up event in our founding location of Springfield!
+                Anyone who is interesting in testing new and in development nail polishes will have the opportunity
+                to do so here! This event is <u>completely free</u> for all students!</b>
+            </p>
+
+
+            <h1 class="" style="color: white;" align="left"><b>Sign up here!</b></h1>     
+
+
+            <button class="btn btn-pink signButton" data-bs-toggle="modal" data-bs-target="#signin" align="left">Sign Up</button>
+ 
+            <div class="modal fade" id="signin" data-bs-backdrop="static">
+                <div class="modal-dialog modal-dialog-centered"> 
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">User Registration</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <form id="user" class="novalidate" align="left">
+                                <div class="form-floating mb-3"> 
+                                    <input type="text" class="form-control" name="fname" id="fname1" placeholder="ex. Bob" minlength="2" maxlength="20" required>
+                                    <label for="fname1" class="d-block">First Name</label>
+                                    <div class="valid-feedback">
+                                        Beautiful name!
+                                    </div>
+                                    <div class="invalid-feedback">
+                                        Name must have 2 characters and less than 20 characters
+                                    </div>
+                                </div>
+                                <div class="form-floating mb-3">
+                                    <input type="text" class="form-control" name="lname" id="lname1" placeholder="ex. Bobson" minlength="2" maxlength="20" required>
+                                    <label for="lname1" class="d-block">Last Name</label>
+                                    <div class="valid-feedback">
+                                        Beautiful name!
+                                    </div>
+                                    <div class="invalid-feedback">
+                                        Name must have 2 characters and less than 20 characters
+                                    </div>                
+                                </div>
+                                <!---->
+                                <div class="form-check form-switch">
+                                    <input class="form-check-input" type="checkbox" role="switch" id="studentSwitch" onclick="studentSwitchCheck()">
+                                    <label class="form-check-label" for="studentSwitch" >I am a student</label>
+                                </div>
+
+                                
+                                <!---->
+                                <div class="mb-3">
+                                    <label for="email">Email Address</label>
+                                    <input class="form-control" type="email" name="email" id="email" value="" placeholder="abc@gmail.com" required> 
+                                    <div class="invalid-feedback">
+                                        Email must be a valid address 
+                                    </div>
+                                </div>
+                                <div class="form-floating mb-3">
+                                    <input class="form-control" type="password" name="password" id="password" value="" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required>
+                                    <label for="password">Password</label>
+                                    <div class="form-text">Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters</div>
+                                    <div class="invalid-feedback">
+                                        Password must use the required characters
+                                    </div>
+                                </div>
+
+                                <!--form buttons-->
+                                <button type="reset" class="btn btn-pink" onclick="resetForm()">Reset</button>
+                                <button type="button" class="btn btn-pink" onclick="validate()">Validate</button>
+                            </form>
+
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-pink" data-bs-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-pink" onclick="register()">Register</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+
+
+        <div class="row">
+            <div class="col">
+
+                <div class="photo-right row-cols-md-2 row-cols-lg-3">
+                    <img align="right" src="../images/popUp.jpg" class="img-fluid rounded mt-4 right" >    
+                </div>
+
+                <div class="card " style="width: 100%; max-width:25rem; color: #e881b5; ">
+                    <div class="card-body">
+                      <h5 class="card-title">🌸Rose Palette Pop-up Event🌸</h5>
+
+                        
+                      <!--tooltips ends here-->
+                      <p class="card-text">Please answer all questions 😊</p>
+                    
+                    <!--event form goes here-->
+                    
+                    <form class="novalidate " id="event" >
+                        <div class="form-floating mb-3"> <!--class="d-block"-->
+                            <input type="text" class="form-control" name="name" id="name" placeholder="ex. Bob" minlength="2" maxlength="20" required disabled> 
+                            <label for="name" class="d-block">Full Name</label>
+                            <div class="valid-feedback">
+                                Beautiful name!
+                            </div>
+                            <div class="invalid-feedback">
+                                Name must have 2 characters and less than 20 characters
+                            </div>
+                        </div>
+
+                        <!---->
+                        <!--checkboxes-->
+                        <div class="mb-3">
+                                <h5>🌸Allergies</h5>
+                            <div class="form-text mb-2">Select all that apply</div>
+
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="allergy1" name="pollen"> 
+                                <label class="form-check-label" for="allergy1">Acrylates</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="allergy2" name="Dairy"> 
+                                <label class="form-check-label" for="allergy2">Benzoyl Peroxide</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="allergy3" name="gluten"> 
+                                <label class="form-check-label" for="allergy3">Hydroquinone</label>
+                            </div>
+                        </div>
+                <!--end of checkboxes-->
+
+                <!--radio buttons-->
+                        <div class="mb-3">
+                            <h5>🌸Goodie Bag:</h5>
+                            <div class="form-text">Offering a to-go bag for all guests!</div>
+
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" id="bag1" name="goodies" required>
+                                <label class="form-check-label" for="flavor1">Mini Polishes 💅</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" id="bag2" name="goodies" required>
+                                <label class="form-check-label" for="flavor2">Spa Kit 💆‍</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" id="bag3" name="goodies" required>
+                                <label class="form-check-label" for="flavor3">Nail Press-on Prototypes 🤫</label>
+                            </div>
+                        </div>
+                <!--end of radio buttons-->
+                        <div>
+                            <h5>🌸Would you like to receive texts about discounts?</h5>
+                            <div class="form-check form-switch">
+                                <input class="form-check-input" type="checkbox" role="switch" id="numSwitch" onclick="numSwitchCheck()">
+                                <label class="form-check-label" for="numSwitch">Yes, I would</label>
+                              </div>
+                        </div>
+                        <div class="form-floating mb-3"> 
+                            <div class="form-floating mb-3">
+                                <input type="text" class="form-control" name="phone" id="phone" minlength="10" maxlength="20" pattern="^\d{10}$" required disabled>
+                                <label for="phone">Phone Number</label>
+                                <div class="form-text" id="phoneText">Do not include any dashes or spaces</div>
+                                <div class="invalid-feedback">
+                                    Must be a valid phone number.
+                                </div>
+                            </div>
+                            
+                            <div class="valid-feedback">
+                                Thank you!
+                            </div>
+                            <div class="invalid-feedback">
+                                Must be a valid phone number
+                            </div>
+                        </div>
+
+
+                    <!--select-->
+                        <div class="mb-3">
+                            <label for="color1">Favorite Polish Form</label>
+                            <select id="color1" name="color" class="form-select" required>
+                            <option selected disabled value="">Select one...</option>
+                            <option value="blue">Gel</option>
+                            <option value="red">Acrylic</option>
+                            <option value="green">Dip Powder</option>
+                            <option value="green">Traditional</option>
+                            </select>
+                        </div>
+                    <!--end of select-->
+
+                    <button type="reset" class="btn btn-pink" onclick="resetFormNew()">Reset</button>
+                    <button type="button" class="btn btn-pink" onclick="finalRegister()">Complete Registration</button>
+                    
+                        <!---->
+                    </form>
+
+                    </div>
+                  </div>
+            </div>
+        </div>
+
+
+
+        </main>  
+
+        <!-- Bootstrap Javascript Code-->    
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>  
+    
+    <!--footer down here-->
+    <footer>
+      <p>Rose Palette Contact Info
+      <br><a href="mailto:rosepalette@gmail.com">rosepalette@gmail.com</a>
+      <br>148-609-2175
+      <br>Address: 742 Evergreen Terrace, Springfield</p>
+    </footer>
+    </body>
+</html>

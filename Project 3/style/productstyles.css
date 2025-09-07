@@ -1,0 +1,126 @@
+
+
+body{
+    background-color: #f4c2e8;
+    overflow-x: hidden;
+    margin: 0;
+    scrollbar-width: none;
+
+}
+
+.navbar {
+    background-color: #dbc2f4;
+    position: sticky;
+    overflow-x: hidden;
+}
+
+footer{
+    background-color: #dbc2f4;
+    color: black;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    width: 100%;
+    height: 140px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: -5px;
+    padding-top: -5px;
+    margin-bottom: 20px;
+    font-size: larger;
+
+}
+
+/*card stuff*/
+
+.card {
+    border-color: white;
+    border-width: 3px;
+    
+}
+
+.card-cover {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.h-100 {
+    height: 100% !important;
+}
+
+.py-5 {
+    padding-top: 3rem !important;
+    padding-bottom: 3rem !important;
+}
+
+.px-4 {
+    padding-right: 1.5rem !important;
+    padding-left: 1.5rem !important;
+}
+
+.container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+/*card ends*/
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+.right {
+    vertical-align: middle;
+    height: auto;
+    width: 800px;
+}
+
+/*colors and root*/
+:root {
+    --app-pink: #e881b5;
+    --app-purple: #b481e8;
+}
+
+.bg-pink {
+ background-color: var(--app-pink)
+}
+
+.pink {
+    color: var(--app-pink)
+}
+
+.bg-purple {
+    background-color: var(--app-purple)
+   }
+   
+.purple {
+       color: var(--app-purple)
+}
+
+
+
+/**bootstrap override **/
+
+.btn-pink {
+    background-color: var(--app-pink)
+}
+
+.btn-pink:hover {
+    background-color: var(--app-purple)
+}
+
+.btn-pink:active,
+.btn-pink:focus  {
+    background-color: pink !important;
+}
+

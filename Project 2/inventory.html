@@ -1,0 +1,199 @@
+<!---
+  Simone Orange
+  sro5234@psu.edu
+  March 21st, 2024
+--->
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+ 
+    
+    <style>
+      .box {
+        padding: 1em 0;
+        background-color: rgb(220, 245, 245);
+        border: 1px solid #ccc;
+        text-align: center;
+      }
+      /*card-cover style*/
+      .card-cover {
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+      }
+    </style>
+    <link rel="stylesheet" href="inventorystyles.css">
+
+  </head>
+  <body>
+
+
+
+    <!--navbar-->
+    <nav class="navbar navbar-expand-md justify-content-center sticky-top">
+        <div class="container-fluid">
+         
+          <span class="navbar-brand h1 mb-0"><span style="color: #e881b5">R</span><span style="color: #e881b5">P</span></span>
+  
+         
+          <button class="navbar-toggler" 
+          data-bs-toggle="collapse"
+          data-bs-target="#my-nav-menu">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+  
+          
+          <div class="navbar-collapse collapse" id="my-nav-menu">
+            <span style="color: white">Check out our beautiful polishes here!</span>
+            <div class="navbar-nav justify-content-center nav-underline p-2">
+              <a class="nav-link " href="home.html" style="color: white">Home Page</a>
+              <a class="nav-link " href="Product.html" style="color: white">Product</a>
+              <a class="nav-link active " href="inventory.html" aria-current="page" style="color: white">Inventory</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+<!--end of nav bar-->
+
+
+    <!--Hero-->
+    <main class="container-md ">
+        <div class="row">
+            <div class="col-sm m-sm-4 m-md-3">
+                <h1 class="display-4 m-4 pb-3 text-uppercase" style="text-align: center; color: #e881b5; "><u>Rose Palette</u></h1>
+                <p class="lead" style="text-align: center; color: white"><span style="color: white;"><b>Luxury Nail Polish</b></span></p>
+            </div>
+        </div>
+    </main>
+
+<!--Table-->
+<main class="container">
+
+  <table class="table table-danger align-middle table-bordered border-dark" >
+      <tr class="">
+          <th scope="col">Nail Polish Bottle</th>
+          <th scope="col"> Name</th>
+          <th scope="col"> Price</th>
+      </tr>
+
+      <!--V First Row V-->
+      <tr >
+          <td class="col-5">
+              <img src="images/red.jpg" class="img-thumbnail" width="250px">
+          </td>
+          <td class="col-5">Candy Apple Red</td>
+          <td class="col-2">$16</td>
+      </tr>
+      <!--V Second Row V-->
+      <tr >
+        <td class="col-5">
+            <img src="images/chocolateBrown.jpg" class="img-thumbnail" width="250px">
+        </td>
+        <td class="col-5">Chocolate Brown</td>
+        <td class="col-2">$16</td>
+      </tr>
+      <!--V Third Row V-->
+      <tr >
+          <td class="col-5">
+              <img src="images/Salmonpink.jpg" class="img-thumbnail" width="250px">
+          </td>
+          <td class="col-5">Florida Flamingo</td>
+          <td class="col-2">$16</td>
+        </tr>
+      <!--V Fourth Row V-->
+      <tr >
+        <td class="col-5">
+            <img src="images/turquoise.jpg" class="img-thumbnail" width="250px">
+        </td>
+        <td class="col-5">Sea Turtle Turquoise</td>
+        <td class="col-2">$16</td>
+    </tr>
+    <!--V Fifth Row V-->
+    <tr >
+      <td class="col-5">
+          <img src="images/lilac.jpg" class="img-thumbnail" width="250px">
+      </td>
+      <td class="col-5">Lovely Lilac</td>
+      <td class="col-2">$16</td>
+    </tr>
+    <!--V Sixth Row V-->
+    <tr >
+        <td class="col-5">
+            <img src="images/green.jpg" class="img-thumbnail" width="250px">
+        </td>
+        <td class="col-5">Sage Green</td>
+        <td class="col-2">$16</td>
+      </tr>
+      <!--V seventh Row V-->
+      <tr >
+        <td class="col-5">
+            <img src="images/peachbottle.jpg" class="img-thumbnail" width="250px">
+        </td>
+        <td class="col-5">Sweet Peach Pie</td>
+        <td class="col-2">$16</td>
+    </tr>
+    <!--V eighth Row V-->
+    <tr >
+      <td class="col-5">
+          <img src="images/pastelpinkbottle.jpg" class="img-thumbnail" width="250px">
+      </td>
+      <td class="col-5">Salmon Pink</td>
+      <td class="col-2">$16</td>
+    </tr>
+    <!--V nineth Row V-->
+    <tr >
+        <td class="col-5">
+            <img src="images/mintgreenbottle.jpg" class="img-thumbnail" width="250px">
+        </td>
+        <td class="col-5">Fresh Mint Green</td>
+        <td class="col-2">$16</td>
+      </tr>
+    <!--V tenth Row V-->
+    <tr >
+      <td class="col-5">
+          <img src="images/babybluebottle.jpg" class="img-thumbnail" width="250px">
+      </td>
+      <td class="col-5">Blissful Baby Blue</td>
+      <td class="col-2">$16</td>
+  </tr>
+  <!--V eleventh Row V-->
+  <tr >
+    <td class="col-5">
+        <img src="images/realpastlepinkbottle.jpg" class="img-thumbnail" width="250px">
+    </td>
+    <td class="col-5">Blush Pink</td>
+    <td class="col-2">$16</td>
+  </tr>
+  <!--V twelfth Row V-->
+  <tr >
+      <td class="col-5">
+          <img src="images/pastelyellowbottle.jpg" class="img-thumbnail" width="250px">
+      </td>
+      <td class="col-5">Sunshine Yellow</td>
+      <td class="col-2">$16</td>
+    </tr>
+
+</table>
+
+
+</main>
+
+
+  <!-- bootstrap, javascript code-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <!--end of JS-->
+  
+  <!--footer down here-->
+  <footer>
+    <p>Rose Palette Contact Info
+    <br><a href="mailto:rosepalette@gmail.com">rosepalette@gmail.com</a>
+    <br>148-609-2175
+    <br>Address: 742 Evergreen Terrace, Springfield</p>
+  </footer>
+  </body>
+</html>
